@@ -1,0 +1,57 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    /* color: white; */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    align-content: center;
+}
+
+.wrapper {
+    margin: auto 0;
+}
+
+input[text] {
+    outline: none;
+    -webkit-appearance: none;
+    border: 0px;
+    border-bottom: 3px solid black;
+    background-color: transparent;
+    font-size: 2rem;
+}
+
+.form,
+.greetings {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+.bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn .5s linear;
+    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
