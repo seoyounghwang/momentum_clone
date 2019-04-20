@@ -6,8 +6,6 @@ const TODO_LS = 'toDos';
 
 let toDos = [];
 
-
-
 function deleteToDo(event) {
     const btn = event.target;
     const li = btn.parentNode;
@@ -47,7 +45,10 @@ function paintToDo(text) {
 function handleSubmit(event) {
     event.preventDefault();
     const currentValue = toDoInput.value;
-    paintToDo(currentValue);
+    if(toDoInput.value!=="") {
+        console.log(currentValue);
+        paintToDo(currentValue);
+    }
     toDoInput.value = "";
 }
 
@@ -58,7 +59,6 @@ function loadToDos() {
         parsedToDos.forEach(function(toDo) {
             paintToDo(toDo.text);
         });
-
     }
 }
 
